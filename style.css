@@ -1,37 +1,43 @@
-*{
+* {
       padding: 0px;
       margin: 0px;
       box-sizing: border-box;
       color: white;
       font-family: "plain light";
 }
-html,body{
+
+html,
+body {
       height: 100%;
       width: 100%;
 }
+
 @keyframes anime {
-      0%{
+      0% {
             font-family: "plain light";
             -webkit-text-stroke: 1px white;
             color: #fff;
             font-weight: 500;
             opacity: 1;
       }
-      47%{
+
+      47% {
             font-family: "plain light";
             -webkit-text-stroke: 1px white;
             color: #fff;
             font-weight: 500;
             opacity: 0;
-      } 
-      50%{
+      }
+
+      50% {
             font-family: "silk serif";
             -webkit-text-stroke: 1px white;
             color: transparent;
             font-weight: 500;
             opacity: 1;
       }
-      100%{
+
+      100% {
             /* font-size: 2vw; */
             font-family: "silk serif";
             -webkit-text-stroke: 1px white;
@@ -47,11 +53,22 @@ html,body{
 
 
 
-.main{
+.main {
       position: relative;
       background-color: #111;
 }
-.loader{
+.crsr{
+      height: 2.3vw;
+      width: 2.3vw;
+      border-radius: 50%;
+      /* background-color: white; */
+      border: 1px solid white;
+      position: fixed;
+      z-index: 999;
+      mix-blend-mode: difference;
+      transform: translate(-40%,-40%);
+}
+.loader {
       height: 100%;
       width: 100%;
       position: fixed;
@@ -59,7 +76,8 @@ html,body{
       background-color: #0B0B0B;
       padding: 25vh 10vw;
 }
-.line{
+
+.line {
       /* background-color: red; */
       height: fit-content;
       overflow: hidden;
@@ -68,39 +86,104 @@ html,body{
       justify-content: flex-start;
       gap: 3vw;
 }
-.line1-part1{
+
+.line1-part1 {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 1vw;
 }
-.line1-part1 h5,h6{
+
+.line1-part1 h5,
+h6 {
       font-size: 2vw;
       font-weight: 100;
       font-family: "silk serif";
 }
-.line1-part1 h5{
+
+.line1-part1 h5 {
       /* background-color: red; */
       width: 4vw;
       text-align: right;
 }
-.line h1{
+
+.line h1 {
       font-size: 6.5vw;
       text-transform: uppercase;
       font-weight: 500;
 }
-.line h2{
+
+.line h2 {
       font-size: 5vw;
       text-transform: uppercase;
       font-weight: 900;
       /* animation-name: anime; */
-      animation-duration: 0.8s;
+      animation-duration: 2.3s;
       animation-iteration-count: infinite;
       opacity: 0;
 }
-.page1{
+
+.page1 {
       height: 100vh;
       width: 100%;
       background-color: #151515;
 }
 
+.page1 .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2vw 4vw;
+}
+
+.nav .nav-part2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3vw;
+}
+
+.nav-part2 h4 {
+      font-size: 1vw;
+      font-weight: 500;
+}
+
+.hero{
+      /* background-color: red; */
+      width: 72%;
+      height: fit-content;
+      margin-left: 27%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 9999;
+      gap: 1vw;
+
+}
+.hero:nth-child(2){
+      margin-top: 18vh;
+}
+.hero h1{
+      font-size: 6vw;
+      font-weight: 500;
+      text-transform: uppercase;
+      line-height: 7vw;
+      display: flex;
+      align-items: center;
+}
+.hero h2,h3{
+      font-size: 6vw;
+      font-weight: 500;
+      text-transform: uppercase;
+      line-height: 7vw;
+}
+.hero h2{
+      border-bottom: 13px solid white;
+}
+.hero h2:hover{
+      -webkit-text-stroke: 1px white;
+      color: transparent;
+      /* font-weight: 400; */
+      border-bottom-color:transparent;
+}
